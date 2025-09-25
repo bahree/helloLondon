@@ -210,6 +210,26 @@ tags:
 - **Trained from scratch** - not fine-tuned from existing models
 - [Other features...]
 
+## Repository
+
+The complete source code, training scripts, and documentation for this model are available on GitHub:
+
+**🔗 [https://github.com/bahree/helloLondon](https://github.com/bahree/helloLondon)**
+
+This repository includes:
+- Complete data collection pipeline for 1500-1850 historical English
+- Custom tokenizer optimized for historical text
+- Training infrastructure with GPU optimization
+- Evaluation and deployment tools
+- Comprehensive documentation and examples
+
+### Quick Start with Repository
+```bash
+git clone https://github.com/bahree/helloLondon.git
+cd helloLondon
+python 06_inference/test_published_models.py --model_type [slm/regular]
+```
+
 ## Training Details
 - **Training Method**: **Trained from scratch** - not fine-tuned
 - [Other details...]
