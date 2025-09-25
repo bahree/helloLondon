@@ -1,0 +1,28 @@
+{
+  "test_timestamp": "2025-09-15 10:09:04",
+  "collection": "Philosophical Transactions of the Royal Society of London",
+  "date_range": "1800-1850",
+  "statistics": {
+    "searches_performed": 1,
+    "items_found": 2,
+    "items_downloaded": 2,
+    "items_skipped": 0,
+    "items_failed": 0,
+    "total_size_downloaded": 19879,
+    "test_items": [
+      {
+        "identifier": "philtrans07681315",
+        "filename": "07681315_djvu.txt",
+        "size": 8176,
+        "local_path": "C:\\src\\TimeCapsuleLLM\\data\\london_historical\\test_downloads\\philosophical_transactions\\philtrans07681315_07681315_djvu.txt"
+      },
+      {
+        "identifier": "philtrans01419782",
+        "filename": "01419782_djvu.txt",
+        "size": 11703,
+        "local_path": "C:\\src\\TimeCapsuleLLM\\data\\london_historical\\test_downloads\\philosophical_transactions\\philtrans01419782_01419782_djvu.txt"
+      }
+    ]
+  },
+  "test_directory": "C:\\src\\TimeCapsuleLLM\\data\\london_historical\\test_downloads\\philosophical_transactions"
+}

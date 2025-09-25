@@ -1,0 +1,66 @@
+# London Historical LLM Requirements
+# Core ML libraries
+torch>=2.0.0
+transformers>=4.30.0
+tokenizers>=0.12.0
+datasets>=2.12.0
+accelerate>=0.20.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Web scraping and data collection
+requests>=2.28.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+internetarchive>=3.5.0
+
+# PDF processing
+PyPDF2>=3.0.0
+# Note: pdftotext requires system-level poppler-utils
+# Install with: sudo apt-get install poppler-utils (Ubuntu/Debian)
+# or: brew install poppler (macOS)
+
+# Language detection and text processing
+langdetect>=1.0.9
+pyspellchecker>=0.7.0
+regex>=2023.0.0
+
+# Text processing and NLP
+nltk>=3.8.1
+spacy>=3.6.0
+textstat>=0.7.3
+
+# Evaluation metrics
+rouge-score>=0.1.2
+bert-score>=0.3.13
+
+# Visualization and monitoring
+matplotlib>=3.7.0
+seaborn>=0.12.0
+wandb>=0.12.0
+
+# API clients
+openai>=0.27.0
+aiohttp>=3.8.0
+
+# Development tools
+jupyter>=1.0.0
+ipywidgets>=7.7.0
+tqdm>=4.65.0
+
+# System utilities
+psutil>=5.9.0
+
+# Hugging Face integration
+huggingface-hub>=0.16.0
+
+# Archive.org API for staged downloads
+internetarchive>=3.6.0
+
+# System dependencies (install with package manager)
+# Ubuntu/Debian: sudo apt install python3-dev
+# CentOS/RHEL: sudo yum install python3-devel
+# macOS: xcode-select --install

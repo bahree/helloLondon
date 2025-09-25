@@ -1,0 +1,9 @@
+{
+  "python_version": "3.12",
+  "system": "linux",
+  "project_root": "/home/amit/src/helloLondon",
+  "data_dir": "/home/amit/src/helloLondon/data",
+  "models_dir": "/home/amit/src/helloLondon/09_models",
+  "logs_dir": "/home/amit/src/helloLondon/logs",
+  "venv_name": "helloLondon"
+}

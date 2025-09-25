@@ -1,0 +1,130 @@
+title,author,year,gutenberg_id,source,source_url,status,score,categories
+t me 
+The Faerie Queene,Edmund Spenser,1590,15242,Project Gutenberg,https://www.gutenberg.org/ebooks/15242,PENDING,1.0,poetry
+Doctor Faustus,Christopher Marlowe,1592,779,Project Gutenberg,https://www.gutenberg.org/ebooks/779,PENDING,1.0,drama
+The Merchant of Venice,William Shakespeare,1596,1514,Project Gutenberg,https://www.gutenberg.org/ebooks/1514,PENDING,1.0,drama
+Hamlet,William Shakespeare,1600,1524,Project Gutenberg,https://www.gutenberg.org/ebooks/1524,PENDING,1.0,drama
+Macbeth,William Shakespeare,1606,1533,Project Gutenberg,https://www.gutenberg.org/ebooks/1533,PENDING,1.0,drama
+King Lear,William Shakespeare,1606,1532,Project Gutenberg,https://www.gutenberg.org/ebooks/1532,PENDING,1.0,drama
+The Tempest,William Shakespeare,1611,1535,Project Gutenberg,https://www.gutenberg.org/ebooks/1535,PENDING,1.0,drama
+Essays,Francis Bacon,1625,418,Project Gutenberg,https://www.gutenberg.org/ebooks/418,PENDING,1.0,philosophy
+The Duchess of Malfi,John Webster,1612,2232,Project Gutenberg,https://www.gutenberg.org/ebooks/2232,PENDING,1.0,drama
+Paradise Lost,John Milton,1667,20,Project Gutenberg,https://www.gutenberg.org/ebooks/20,PENDING,1.0,poetry
+Paradise Regained,John Milton,1671,58,Project Gutenberg,https://www.gutenberg.org/ebooks/58,PENDING,1.0,poetry
+The Pilgrim's Progress,John Bunyan,1678,131,Project Gutenberg,https://www.gutenberg.org/ebooks/131,PENDING,1.0,religious
+Robinson Crusoe,Daniel Defoe,1719,521,Project Gutenberg,https://www.gutenberg.org/ebooks/521,PENDING,1.0,fiction
+Moll Flanders,Daniel Defoe,1722,370,Project Gutenberg,https://www.gutenberg.org/ebooks/370,PENDING,1.0,fiction
+Gulliver's Travels,Jonathan Swift,1726,829,Project Gutenberg,https://www.gutenberg.org/ebooks/829,PENDING,1.0,fiction
+A Modest Proposal,Jonathan Swift,1729,1080,Project Gutenberg,https://www.gutenberg.org/ebooks/1080,PENDING,1.0,essay
+Tom Jones,Henry Fielding,1749,6593,Project Gutenberg,https://www.gutenberg.org/ebooks/6593,PENDING,1.0,fiction
+Joseph Andrews,Henry Fielding,1742,6831,Project Gutenberg,https://www.gutenberg.org/ebooks/6831,PENDING,1.0,fiction
+Tristram Shandy,Laurence Sterne,1759,1079,Project Gutenberg,https://www.gutenberg.org/ebooks/1079,PENDING,1.0,fiction
+A Sentimental Journey,Laurence Sterne,1768,804,Project Gutenberg,https://www.gutenberg.org/ebooks/804,PENDING,1.0,fiction
+The Vicar of Wakefield,Oliver Goldsmith,1766,266,Project Gutenberg,https://www.gutenberg.org/ebooks/266,PENDING,1.0,fiction
+The Castle of Otranto,Horace Walpole,1764,696,Project Gutenberg,https://www.gutenberg.org/ebooks/696,PENDING,1.0,fiction
+The Mysteries of Udolpho,Ann Radcliffe,1794,3268,Project Gutenberg,https://www.gutenberg.org/ebooks/3268,PENDING,1.0,fiction
+The Italian,Ann Radcliffe,1797,1289,Project Gutenberg,https://www.gutenberg.org/ebooks/1289,PENDING,1.0,fiction
+Songs of Innocence,William Blake,1789,574,Project Gutenberg,https://www.gutenberg.org/ebooks/574,PENDING,1.0,poetry
+Songs of Experience,William Blake,1794,574,Project Gutenberg,https://www.gutenberg.org/ebooks/574,PENDING,1.0,poetry
+The Marriage of Heaven and Hell,William Blake,1790,574,Project Gutenberg,https://www.gutenberg.org/ebooks/574,PENDING,1.0,poetry
+Lyrical Ballads,William Wordsworth,1798,8905,Project Gutenberg,https://www.gutenberg.org/ebooks/8905,PENDING,1.0,poetry
+The Prelude,William Wordsworth,1850,12383,Project Gutenberg,https://www.gutenberg.org/ebooks/12383,PENDING,1.0,poetry
+The Excursion,William Wordsworth,1814,12883,Project Gutenberg,https://www.gutenberg.org/ebooks/12883,PENDING,1.0,poetry
+The Rime of the Ancient Mariner,Samuel Taylor Coleridge,1798,8905,Project Gutenberg,https://www.gutenberg.org/ebooks/8905,PENDING,1.0,poetry
+Kubla Khan,Samuel Taylor Coleridge,1816,8905,Project Gutenberg,https://www.gutenberg.org/ebooks/8905,PENDING,1.0,poetry
+Childe Harold's Pilgrimage,Lord Byron,1812,5131,Project Gutenberg,https://www.gutenberg.org/ebooks/5131,PENDING,1.0,poetry
+Don Juan,Lord Byron,1819,21700,Project Gutenberg,https://www.gutenberg.org/ebooks/21700,PENDING,1.0,poetry
+The Corsair,Lord Byron,1814,8901,Project Gutenberg,https://www.gutenberg.org/ebooks/8901,PENDING,1.0,poetry
+Manfred,Lord Byron,1817,8902,Project Gutenberg,https://www.gutenberg.org/ebooks/8902,PENDING,1.0,drama
+Prometheus Unbound,Percy Bysshe Shelley,1820,4797,Project Gutenberg,https://www.gutenberg.org/ebooks/4797,PENDING,1.0,drama
+Adonais,Percy Bysshe Shelley,1821,4797,Project Gutenberg,https://www.gutenberg.org/ebooks/4797,PENDING,1.0,poetry
+Ozymandias,Percy Bysshe Shelley,1818,4797,Project Gutenberg,https://www.gutenberg.org/ebooks/4797,PENDING,1.0,poetry
+Endymion,John Keats,1818,23678,Project Gutenberg,https://www.gutenberg.org/ebooks/23678,PENDING,1.0,poetry
+The Eve of St. Agnes,John Keats,1820,23678,Project Gutenberg,https://www.gutenberg.org/ebooks/23678,PENDING,1.0,poetry
+La Belle Dame sans Merci,John Keats,1819,23678,Project Gutenberg,https://www.gutenberg.org/ebooks/23678,PENDING,1.0,poetry
+Sense and Sensibility,Jane Austen,1811,161,Project Gutenberg,https://www.gutenberg.org/ebooks/161,PENDING,1.0,fiction
+Pride and Prejudice,Jane Austen,1813,1342,Project Gutenberg,https://www.gutenberg.org/ebooks/1342,PENDING,1.0,fiction
+Mansfield Park,Jane Austen,1814,141,Project Gutenberg,https://www.gutenberg.org/ebooks/141,PENDING,1.0,fiction
+Emma,Jane Austen,1815,158,Project Gutenberg,https://www.gutenberg.org/ebooks/158,PENDING,1.0,fiction
+Northanger Abbey,Jane Austen,1818,121,Project Gutenberg,https://www.gutenberg.org/ebooks/121,PENDING,1.0,fiction
+Persuasion,Jane Austen,1818,105,Project Gutenberg,https://www.gutenberg.org/ebooks/105,PENDING,1.0,fiction
+Waverley,Walter Scott,1814,599,Project Gutenberg,https://www.gutenberg.org/ebooks/599,PENDING,1.0,fiction
+Ivanhoe,Walter Scott,1819,82,Project Gutenberg,https://www.gutenberg.org/ebooks/82,PENDING,1.0,fiction
+Rob Roy,Walter Scott,1817,7025,Project Gutenberg,https://www.gutenberg.org/ebooks/7025,PENDING,1.0,fiction
+The Antiquary,Walter Scott,1816,7005,Project Gutenberg,https://www.gutenberg.org/ebooks/7005,PENDING,1.0,fiction
+Kenilworth,Walter Scott,1821,1606,Project Gutenberg,https://www.gutenberg.org/ebooks/1606,PENDING,1.0,fiction
+Frankenstein,Mary Shelley,1818,84,Project Gutenberg,https://www.gutenberg.org/ebooks/84,PENDING,1.0,fiction
+The Last Man,Mary Shelley,1826,18247,Project Gutenberg,https://www.gutenberg.org/ebooks/18247,PENDING,1.0,fiction
+The Vampyre,John Polidori,1819,6087,Project Gutenberg,https://www.gutenberg.org/ebooks/6087,PENDING,1.0,fiction
+The Pickwick Papers,Charles Dickens,1836,580,Project Gutenberg,https://www.gutenberg.org/ebooks/580,PENDING,1.0,fiction
+Oliver Twist,Charles Dickens,1837,730,Project Gutenberg,https://www.gutenberg.org/ebooks/730,PENDING,1.0,fiction
+Nicholas Nickleby,Charles Dickens,1838,967,Project Gutenberg,https://www.gutenberg.org/ebooks/967,PENDING,1.0,fiction
+The Old Curiosity Shop,Charles Dickens,1840,700,Project Gutenberg,https://www.gutenberg.org/ebooks/700,PENDING,1.0,fiction
+Barnaby Rudge,Charles Dickens,1841,917,Project Gutenberg,https://www.gutenberg.org/ebooks/917,PENDING,1.0,fiction
+A Christmas Carol,Charles Dickens,1843,46,Project Gutenberg,https://www.gutenberg.org/ebooks/46,PENDING,1.0,fiction
+The Chimes,Charles Dickens,1844,653,Project Gutenberg,https://www.gutenberg.org/ebooks/653,PENDING,1.0,fiction
+The Cricket on the Hearth,Charles Dickens,1845,20795,Project Gutenberg,https://www.gutenberg.org/ebooks/20795,PENDING,1.0,fiction
+The Battle of Life,Charles Dickens,1846,676,Project Gutenberg,https://www.gutenberg.org/ebooks/676,PENDING,1.0,fiction
+The Haunted Man,Charles Dickens,1848,644,Project Gutenberg,https://www.gutenberg.org/ebooks/644,PENDING,1.0,fiction
+Dombey and Son,Charles Dickens,1846,821,Project Gutenberg,https://www.gutenberg.org/ebooks/821,PENDING,1.0,fiction
+David Copperfield,Charles Dickens,1850,766,Project Gutenberg,https://www.gutenberg.org/ebooks/766,PENDING,1.0,fiction
+Vanity Fair,William Makepeace Thackeray,1847,599,Project Gutenberg,https://www.gutenberg.org/ebooks/599,PENDING,1.0,fiction
+The Luck of Barry Lyndon,William Makepeace Thackeray,1844,1081,Project Gutenberg,https://www.gutenberg.org/ebooks/1081,PENDING,1.0,fiction
+Pendennis,William Makepeace Thackeray,1848,7265,Project Gutenberg,https://www.gutenberg.org/ebooks/7265,PENDING,1.0,fiction
+Jane Eyre,Charlotte Brontë,1847,1260,Project Gutenberg,https://www.gutenberg.org/ebooks/1260,PENDING,1.0,fiction
+Shirley,Charlotte Brontë,1849,30486,Project Gutenberg,https://www.gutenberg.org/ebooks/30486,PENDING,1.0,fiction
+Wuthering Heights,Emily Brontë,1847,768,Project Gutenberg,https://www.gutenberg.org/ebooks/768,PENDING,1.0,fiction
+Mary Barton,Elizabeth Gaskell,1848,2153,Project Gutenberg,https://www.gutenberg.org/ebooks/2153,PENDING,1.0,fiction
+Headlong Hall,Thomas Love Peacock,1816,12803,Project Gutenberg,https://www.gutenberg.org/ebooks/12803,PENDING,1.0,fiction
+Nightmare Abbey,Thomas Love Peacock,1818,9909,Project Gutenberg,https://www.gutenberg.org/ebooks/9909,PENDING,1.0,fiction
+Maid Marian,Thomas Love Peacock,1822,966,Project Gutenberg,https://www.gutenberg.org/ebooks/966,PENDING,1.0,fiction
+Crotchet Castle,Thomas Love Peacock,1831,2075,Project Gutenberg,https://www.gutenberg.org/ebooks/2075,PENDING,1.0,fiction
+Pelham,Edward Bulwer-Lytton,1828,7623,Project Gutenberg,https://www.gutenberg.org/ebooks/7623,PENDING,1.0,fiction
+Paul Clifford,Edward Bulwer-Lytton,1830,7735,Project Gutenberg,https://www.gutenberg.org/ebooks/7735,PENDING,1.0,fiction
+Eugene Aram,Edward Bulwer-Lytton,1832,7614,Project Gutenberg,https://www.gutenberg.org/ebooks/7614,PENDING,1.0,fiction
+The Last Days of Pompeii,Edward Bulwer-Lytton,1834,1565,Project Gutenberg,https://www.gutenberg.org/ebooks/1565,PENDING,1.0,fiction
+Night and Morning,Edward Bulwer-Lytton,1841,9755,Project Gutenberg,https://www.gutenberg.org/ebooks/9755,PENDING,1.0,fiction
+The Caxtons,Edward Bulwer-Lytton,1849,7624,Project Gutenberg,https://www.gutenberg.org/ebooks/7624,PENDING,1.0,fiction
+The Last of the Barons,Edward Bulwer-Lytton,1843,7727,Project Gutenberg,https://www.gutenberg.org/ebooks/7727,PENDING,1.0,fiction
+Belinda,Maria Edgeworth,1801,35008,Project Gutenberg,https://www.gutenberg.org/ebooks/35008,PENDING,1.0,fiction
+Self-Control,Mary Brunton,1811,35009,Project Gutenberg,https://www.gutenberg.org/ebooks/35009,PENDING,1.0,fiction
+Leviathan,Thomas Hobbes,1651,3207,Project Gutenberg,https://www.gutenberg.org/ebooks/3207,PENDING,1.0,philosophy
+Two Treatises of Government,John Locke,1689,7370,Project Gutenberg,https://www.gutenberg.org/ebooks/7370,PENDING,1.0,philosophy
+Reflections on the Revolution in France,Edmund Burke,1790,15637,Project Gutenberg,https://www.gutenberg.org/ebooks/15637,PENDING,1.0,philosophy
+Rights of Man,Thomas Paine,1791,1472,Project Gutenberg,https://www.gutenberg.org/ebooks/1472,PENDING,1.0,philosophy
+Introduction to the Principles of Morals and Legislation,Jeremy Bentham,1789,22732,Project Gutenberg,https://www.gutenberg.org/ebooks/22732,PENDING,1.0,philosophy
+On Liberty,John Stuart Mill,1859,34901,Project Gutenberg,https://www.gutenberg.org/ebooks/34901,PENDING,1.0,philosophy
+Principles of Political Economy,John Stuart Mill,1848,30107,Project Gutenberg,https://www.gutenberg.org/ebooks/30107,PENDING,1.0,philosophy
+An Essay on the Principle of Population,Thomas Malthus,1798,4239,Project Gutenberg,https://www.gutenberg.org/ebooks/4239,PENDING,1.0,philosophy
+The Wealth of Nations,Adam Smith,1776,3300,Project Gutenberg,https://www.gutenberg.org/ebooks/3300,PENDING,1.0,philosophy
+Institutes of the Laws of England,Edward Coke,1628,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,legal
+Commentaries on the Laws of England,William Blackstone,1765,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,legal
+The Province of Jurisprudence Determined,John Austin,1832,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,legal
+Fragment on Government,Jeremy Bentham,1776,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,legal
+Chronicles of England Scotland and Ireland,Raphael Holinshed,1577,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,history
+The History of the Decline and Fall of the Roman Empire,Edward Gibbon,1776,731,Project Gutenberg,https://www.gutenberg.org/ebooks/731,PENDING,1.0,history
+The History of England,David Hume,1754,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,history
+The History of England,Thomas Macaulay,1848,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,history
+The Principal Navigations,Richard Hakluyt,1589,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,travel
+Purchas his Pilgrimes,Samuel Purchas,1625,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,travel
+Voyages,James Cook,1768,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,travel
+Travels in the Interior of Africa,Mungo Park,1799,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,travel
+Novum Organum,Francis Bacon,1620,45988,Project Gutenberg,https://www.gutenberg.org/ebooks/45988,PENDING,1.0,science
+Principia Mathematica,Isaac Newton,1687,28233,Project Gutenberg,https://www.gutenberg.org/ebooks/28233,PENDING,1.0,science
+Opticks,Isaac Newton,1704,33504,Project Gutenberg,https://www.gutenberg.org/ebooks/33504,PENDING,1.0,science
+The Sceptical Chymist,Robert Boyle,1661,22914,Project Gutenberg,https://www.gutenberg.org/ebooks/22914,PENDING,1.0,science
+Experiments and Observations on Different Kinds of Air,Joseph Priestley,1774,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,science
+Elements of Chemical Philosophy,Humphry Davy,1812,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,science
+Experimental Researches in Electricity,Michael Faraday,1839,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,science
+On the Motion of the Heart and Blood,William Harvey,1628,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,medicine
+Medical Observations,Thomas Sydenham,1676,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,medicine
+Treatise on the Blood Inflammation and Gun-shot Wounds,John Hunter,1794,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,medicine
+An Inquiry into the Causes and Effects of the Variolae Vaccinae,Edward Jenner,1798,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,medicine
+The Imitation of Christ,Thomas à Kempis,1418,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Spiritual Exercises,Ignatius of Loyola,1548,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+The Interior Castle,Teresa of Ávila,1577,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Bible Translation,William Tyndale,1525,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Book of Martyrs,John Foxe,1563,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Of the Laws of Ecclesiastical Polity,Richard Hooker,1593,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Sermons and Journals,John Wesley,1739,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
+Sermons,George Whitefield,1739,30802,Project Gutenberg,https://www.gutenberg.org/ebooks/30802,PENDING,1.0,religious
