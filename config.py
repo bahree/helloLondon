@@ -168,8 +168,8 @@ class Config:
             # Data cleaning configuration
             "aggressive_cleaning": False,  # Set to True to enable aggressive structured data filtering
             # Data source configuration
-            "enable_old_bailey": False,  # Enable Old Bailey for authentic historical legal content
-            "enable_london_lives": False,  # Keep disabled for now (was causing issues)
+            "enable_old_bailey": False,  # Disabled - causes generation issues with structured legal data
+            "enable_london_lives": False,  # Disabled - causes generation issues with semantic markup
             "enable_literature": True,  # Enable literature sources for diverse text
             "enable_newspapers": True,  # Enable newspaper sources
             "enable_diaries": True,  # Enable diary sources
