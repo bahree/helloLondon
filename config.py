@@ -97,7 +97,16 @@ class Config:
             "enable_tf32": True,
             "enable_amp": True,
             "amp_dtype": "bf16",
-            "enable_compile": True
+            "enable_compile": True,
+            # Data cleaning configuration
+            "aggressive_cleaning": False,  # Set to True to enable aggressive structured data filtering
+            # Data source configuration
+            "enable_old_bailey": False,  # Disabled - causes generation issues with structured legal data
+            "enable_london_lives": False,  # Disabled - causes generation issues with semantic markup
+            "enable_literature": True,  # Enable literature sources for diverse text
+            "enable_newspapers": True,  # Enable newspaper sources
+            "enable_diaries": True,  # Enable diary sources
+            "enable_archive_org": True,  # Enable archive.org sources (back online)
         }
         
         # SLM (Small Language Model) configuration - optimized for 2x A30 GPUs (24GB each)
