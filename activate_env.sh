@@ -2,13 +2,16 @@
 # Hello London Environment Activation
 echo "🏛️ Activating Hello London Environment..."
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Activate virtual environment
-source "/home/amit/src/helloLondon/helloLondon/bin/activate"
+source "$SCRIPT_DIR/helloLondon/bin/activate"
 
 # Set environment variables
-export HELLO_LONDON_ROOT="/home/amit/src/helloLondon"
-export HELLO_LONDON_DATA="/home/amit/src/helloLondon/data"
-export HELLO_LONDON_MODELS="/home/amit/src/helloLondon/09_models"
+export HELLO_LONDON_ROOT="$SCRIPT_DIR"
+export HELLO_LONDON_DATA="$SCRIPT_DIR/data"
+export HELLO_LONDON_MODELS="$SCRIPT_DIR/09_models"
 
 echo "✅ Environment activated!"
 echo "📁 Project root: $HELLO_LONDON_ROOT"

@@ -110,7 +110,8 @@ class HistoricalTokenizerTrainer:
             special_tokens=self.special_tokens,
             min_frequency=2,     # Minimum frequency for tokens
             show_progress=True,
-            continuing_subword_prefix="##",  # For subword tokens
+            # Remove the WordPiece-style prefix that creates ## artifacts
+            # continuing_subword_prefix="##",  # ❌ Removed to eliminate ## artifacts
             initial_alphabet=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
                             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
                             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",

@@ -873,7 +873,7 @@ class HistoricalDataCollector:
             return False
     
     def normalize_text(self, text: str) -> str:
-        """Simple text normalization - minimal cleaning"""
+        """Enhanced text normalization with repetitive pattern cleaning"""
         # Fix basic encoding issues
         text = text.replace('â€™', "'")
         text = text.replace('â€œ', '"')
@@ -884,11 +884,122 @@ class HistoricalDataCollector:
         # Normalize Unicode
         text = unicodedata.normalize('NFC', text)
         
-        # Only do basic cleaning - remove excessive whitespace
+        # Remove repetitive patterns that cause model issues
+        text = self.clean_repetitive_patterns(text)
+        
+        # Basic cleaning - remove excessive whitespace
         text = re.sub(r'\s+', ' ', text)
         text = re.sub(r'\n+', '\n', text)
         
         return text.strip()
+    
+    def clean_repetitive_patterns(self, text: str) -> str:
+        """Remove repetitive patterns that can cause model generation issues"""
+        # Remove repetitive bullet points (5+ in a row)
+        text = re.sub(r'•\s*•\s*•\s*•\s*•+', '', text)
+        
+        # Remove repetitive carets (5+ in a row)  
+        text = re.sub(r'\^\s*\^\s*\^\s*\^\s*\^+', '', text)
+        
+        # Remove any character repeated 5+ times
+        text = re.sub(r'(.)\1{4,}', r'\1\1\1', text)
+        
+        # Remove excessive whitespace
+        text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)
+        
+        # Remove lines that are just repetitive characters
+        lines = text.split('\n')
+        cleaned_lines = []
+        for line in lines:
+            line = line.strip()
+            if line:
+                # Check if line is mostly repetitive characters
+                if len(line) > 10:
+                    # Count unique characters
+                    unique_chars = len(set(line))
+                    if unique_chars < 3:  # Less than 3 unique characters in a long line
+                        continue  # Skip this line
+                cleaned_lines.append(line)
+        
+        return '\n'.join(cleaned_lines)
+    
+    def clean_existing_processed_data(self) -> bool:
+        """Clean repetitive patterns from existing processed data files"""
+        try:
+            self.logger.info("🧹 Cleaning existing processed data...")
+            
+            # Find all processed files
+            processed_files = list(self.processed_dir.glob("cleaned_*.txt"))
+            if not processed_files:
+                self.logger.warning("No processed files found to clean")
+                return False
+            
+            self.logger.info(f"Found {len(processed_files)} processed files to clean")
+            
+            cleaned_count = 0
+            total_chars_before = 0
+            total_chars_after = 0
+            
+            for file_path in processed_files:
+                try:
+                    # Read original file
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        original_content = f.read()
+                    
+                    total_chars_before += len(original_content)
+                    
+                    # Clean the content
+                    cleaned_content = self.clean_repetitive_patterns(original_content)
+                    
+                    # Only write if content changed
+                    if cleaned_content != original_content:
+                        with open(file_path, 'w', encoding='utf-8') as f:
+                            f.write(cleaned_content)
+                        
+                        chars_removed = len(original_content) - len(cleaned_content)
+                        self.logger.info(f"Cleaned {file_path.name}: removed {chars_removed:,} characters")
+                        cleaned_count += 1
+                    
+                    total_chars_after += len(cleaned_content)
+                    
+                except Exception as e:
+                    self.logger.error(f"Error cleaning {file_path.name}: {e}")
+                    continue
+            
+            # Clean the comprehensive corpus
+            corpus_file = config.london_historical_data / "london_historical_corpus_comprehensive.txt"
+            if corpus_file.exists():
+                self.logger.info("Cleaning comprehensive corpus...")
+                try:
+                    with open(corpus_file, 'r', encoding='utf-8') as f:
+                        corpus_content = f.read()
+                    
+                    cleaned_corpus = self.clean_repetitive_patterns(corpus_content)
+                    
+                    if cleaned_corpus != corpus_content:
+                        with open(corpus_file, 'w', encoding='utf-8') as f:
+                            f.write(cleaned_corpus)
+                        
+                        corpus_chars_removed = len(corpus_content) - len(cleaned_corpus)
+                        self.logger.info(f"Cleaned corpus: removed {corpus_chars_removed:,} characters")
+                        cleaned_count += 1
+                    
+                except Exception as e:
+                    self.logger.error(f"Error cleaning corpus: {e}")
+            
+            # Print summary
+            chars_removed = total_chars_before - total_chars_after
+            self.logger.info(f"✅ Cleaning completed:")
+            self.logger.info(f"   Files cleaned: {cleaned_count}")
+            self.logger.info(f"   Characters removed: {chars_removed:,}")
+            self.logger.info(f"   Original size: {total_chars_before:,}")
+            self.logger.info(f"   Cleaned size: {total_chars_after:,}")
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error during data cleaning: {e}")
+            return False
     
     def is_obviously_structured_line(self, line: str) -> bool:
         """Check if a line is obviously structured data (less aggressive)"""
@@ -1790,6 +1901,8 @@ def main():
                        help="Output directory for processed data")
     parser.add_argument("--sanitize_only", action="store_true",
                        help="Only sanitize existing filenames, don't download or process")
+    parser.add_argument("--clean_existing", action="store_true",
+                       help="Clean repetitive patterns from existing processed data")
     # Data source configuration is handled in config.py
     # Command line overrides removed for cleaner code management
     
@@ -1808,6 +1921,16 @@ def main():
         print(f"\n✅ Sanitized {sanitized_count} filenames")
         print("📁 All filenames are now safe for processing")
         return True
+    elif args.clean_existing:
+        # Clean existing processed data
+        print("🧹 Cleaning repetitive patterns from existing processed data...")
+        success = collector.clean_existing_processed_data()
+        if success:
+            print("\n✅ Data cleaning completed successfully!")
+            print("📚 Processed data is now clean and ready for training")
+        else:
+            print("\n❌ Data cleaning failed")
+        return success
     else:
         # Run full processing
         success = collector.download_and_process_sources(args.max_sources)

@@ -35,6 +35,7 @@ textstat>=0.7.3
 
 # Evaluation metrics
 rouge-score>=0.1.2
+rouge_score>=0.1.2
 bert-score>=0.3.13
 
 # Visualization and monitoring

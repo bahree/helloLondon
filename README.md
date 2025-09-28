@@ -1,7 +1,9 @@
 # 🏛️ London Historical LLM (aka helloLondon)
 ## Complete Guide to Building LLMs from Scratch
 
-**Learn to build Large Language Models from the ground up** using historical London texts (1500-1850). This comprehensive 4-part series walks you through every step: data collection, custom tokenization, model training, evaluation, and deployment. **We build two identical models** - only the size differs (117M vs 354M parameters). Includes working code, published models, and production-ready inference.
+**Learn to build Large Language Models from the ground up** using historical London texts (1500-1850). This comprehensive 4-part series walks you through every step: data collection, custom tokenization, model training, evaluation, and deployment. **We build two identical models** - only the size differs (117M vs 354M parameters). Includes working code, published models, and educational inference examples.
+
+> **⚠️ Educational Purpose**: This is a learning project designed to teach LLM development concepts. For production-scale LLMs, you'll need much larger datasets, more sophisticated infrastructure, and additional considerations not covered here.
 
 > **📖 Want to understand the core LLM concepts?** This project focuses on implementation and hands-on building. For deeper understanding of foundational concepts like tokenizers, prompt engineering, RAG, responsible AI, fine-tuning, and more, check out [**Generative AI in Action**](https://a.co/d/ffzkJ7T) by Amit Bahree. You can learn more about the book → [by clicking here.](https://blog.desigeek.com/post/2024/10/book-release-genai-in-action/)
 
@@ -34,13 +36,13 @@ This isn't just a model repository—it's a **complete educational journey** tha
 - **Model Architecture**: Implement and train GPT-style models from scratch
 - **Training Infrastructure**: Multi-GPU training, checkpointing, and monitoring
 - **Evaluation**: Comprehensive testing with historical accuracy metrics
-- **Deployment**: Publish to Hugging Face and build production inference systems
+- **Deployment**: Publish to Hugging Face and build inference systems
 
 ### **Hands-On Experience:**
 - **Working Code**: Every component is fully implemented and documented
 - **Live Models**: Use published models immediately or train your own
 - **Real Data**: 500M+ characters of authentic historical English (1500-1850)
-- **Production Ready**: Professional-grade code with error handling and logging
+- **Educational Focus**: Well-structured code designed for learning LLM development
 
 ## **📚 Complete Documentation**
 
@@ -53,9 +55,9 @@ We build **two identical models** with the same architecture, tokenizer, and tra
 | Model | Parameters | Iterations | Training Time* | Use Case | Best For |
 |-------|------------|------------|---------------|----------|----------|
 | **SLM** (Small) | 117M | 60,000 | ~8-12 hours | Fast inference, resource-constrained | Development, testing, mobile |
-| **Regular** (Full) | 354M | 60,000 | ~28-32 hours | High-quality generation | Production, research, publishing |
+| **Regular** (Full) | 354M | 60,000 | ~28-32 hours | High-quality generation | Advanced learning, research, experimentation |
 
-**Why Two Models?** The SLM is perfect for learning, testing, and resource-constrained environments. The Regular model provides higher quality generation for production use. Both use identical code - just different configuration files!
+**Why Two Models?** The SLM is perfect for learning, testing, and resource-constrained environments. The Regular model provides higher quality generation for more advanced experimentation. Both use identical code - just different configuration files!
 
 *Times based on dual GPU training (2x A30 GPUs). Single GPU will take ~2x longer.
 
@@ -257,7 +259,7 @@ Text Types: 8+ major categories
 - **[Tokenizer Vocabulary](08_documentation/TOKENIZER_VOCABULARY.md)** - Custom tokenizer details
 - **[GPU Tuning Guide](08_documentation/GPU_TUNING.md)** - Precision, TF32, batch/seq sizing per GPU
 - **[Hugging Face Publishing](08_documentation/HUGGINGFACE_PUBLISHING.md)** - Publish models to Hugging Face
-- **[Deployment Guide](08_documentation/DEPLOYMENT_GUIDE.md)** - Production deployment options
+- **[Deployment Guide](08_documentation/DEPLOYMENT_GUIDE.md)** - Inference deployment options
 - **[WandB Setup](08_documentation/WANDB_SETUP.md)** - Experiment tracking and monitoring
 
 ## **🏗️ Repository Structure**
@@ -397,7 +399,7 @@ This project draws inspiration from two foundational works:
 ### **TimeCapsuleLLM**
 - **Source**: [TimeCapsuleLLM](https://github.com/haykgrigo3/TimeCapsuleLLM) by haykgrigo3
 - **Contribution**: Provided the initial concept and framework for historical language model training
-- **What I built on**: Extended with production-ready infrastructure, comprehensive evaluation frameworks, and deployment to Hugging Face
+- **What I built on**: Extended with educational infrastructure, comprehensive evaluation frameworks, and deployment to Hugging Face
 
 ### **nanoGPT**
 - **Source**: [nanoGPT](https://github.com/karpathy/nanoGPT) by Andrej Karpathy
@@ -405,22 +407,23 @@ This project draws inspiration from two foundational works:
 - **What I built on**: Adapted the architecture for historical text training, added custom tokenization, and integrated modern training practices
 
 ### **My Extensions**
-I extend these foundational concepts with:
-- **Production-ready infrastructure** with comprehensive error handling and logging
-- **Custom historical tokenizer** optimized for 1500-1850 English
-- **Advanced data filtering** and quality control systems
-- **Multi-GPU training** with Distributed Data Parallel
-- **Comprehensive evaluation frameworks** with historical accuracy metrics
-- **Hugging Face deployment** with professional model cards and documentation
-- **Unified inference system** supporting both PyTorch checkpoints and published models
+
+I extend these foundational concepts with a comprehensive educational infrastructure that includes detailed error handling, comprehensive logging, and step-by-step documentation designed to make LLM development accessible to learners. The system features a custom historical tokenizer specifically optimized for 1500-1850 English text, incorporating period-specific vocabulary, archaic language patterns, and historical terminology that standard tokenizers struggle to handle effectively.
+
+The project includes advanced data filtering and quality control systems that ensure only high-quality historical text reaches the training pipeline, along with sophisticated multi-GPU training infrastructure using Distributed Data Parallel for efficient model training. The evaluation framework goes beyond standard language model metrics to include historical accuracy assessments, temporal consistency checks, and domain-specific performance measurements that are crucial for historical language modeling. The complete system supports both local PyTorch checkpoint inference and seamless Hugging Face deployment with comprehensive model cards, detailed documentation, and unified inference capabilities that make the models accessible to researchers, educators, and developers across different technical backgrounds.
+
+## **🔧 Troubleshooting**
+
+**📖 [TROUBLESHOOTING.md](08_documentation/TROUBLESHOOTING.md)** - Complete troubleshooting guide with solutions for all common issues including environment setup, data collection, tokenizer problems, model training, and more.
+
 
 ## **🤝 Support**
 
 You are kidding right? 🤣
 
 For issues and questions:
-1. Check the troubleshooting guide
-2. Review the documentation
+1. Check the troubleshooting guide above
+2. Review the documentation in `08_documentation/`
 3. Check the logs in the respective folders
 4. Create an issue on GitHub
 

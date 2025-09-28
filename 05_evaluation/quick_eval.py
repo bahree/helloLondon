@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Quick Evaluation Script for London Historical SLM
+Quick Evaluation Script for London Historical Models
 Runs essential evaluations without requiring OpenAI API
 """
 
@@ -46,7 +46,7 @@ except Exception:
     pass
 
 class QuickEvaluator:
-    """Quick evaluator for London Historical SLM"""
+    """Quick evaluator for London Historical Models"""
     
     def __init__(self, model_dir: str, tokenizer_dir: str, output_dir: str = "quick_results", device: str = "cpu"):
         self.model_dir = Path(model_dir)
@@ -584,7 +584,7 @@ class QuickEvaluator:
             # Save summary report
             summary_file = self.output_dir / "quick_evaluation_summary.txt"
             with open(summary_file, 'w', encoding='utf-8') as f:
-                f.write("London Historical SLM - Quick Evaluation Summary\n")
+                f.write("London Historical Model - Quick Evaluation Summary\n")
                 f.write("=" * 50 + "\n\n")
                 
                 # Historical accuracy results
@@ -628,7 +628,7 @@ class QuickEvaluator:
     def print_summary(self):
         """Print evaluation summary"""
         print("\n" + "="*60)
-        print(f"LONDON HISTORICAL SLM - QUICK EVALUATION SUMMARY")
+        print(f"LONDON HISTORICAL MODEL - QUICK EVALUATION SUMMARY")
         print("="*60)
         
         # Historical accuracy results
@@ -667,7 +667,7 @@ class QuickEvaluator:
 
 def main():
     """Main evaluation function"""
-    parser = argparse.ArgumentParser(description="Quick Evaluation for London Historical SLM")
+    parser = argparse.ArgumentParser(description="Quick Evaluation for London Historical Models")
     parser.add_argument("--model_dir", type=str, default="09_models/checkpoints",
                        help="Directory containing trained model")
     parser.add_argument("--tokenizer_dir", type=str, 
@@ -680,7 +680,7 @@ def main():
     
     args = parser.parse_args()
     
-    print(f"London Historical SLM - Quick Evaluation")
+    print(f"London Historical Model - Quick Evaluation")
     print("=" * 50)
     
     # Initialize evaluator

@@ -11,7 +11,7 @@ Welcome to the **helloLondon** documentation! This folder contains comprehensive
 | **Use the published model** | [Inference Quick Start](INFERENCE_QUICK_START.md) | 2 minutes |
 | **Train my own model** | [Training Quick Start](TRAINING_QUICK_START.md) | 15 minutes |
 | **Understand the system** | [Complete Technical Guide](COMPLETE_TECHNICAL_GUIDE.md) | 30 minutes |
-| **Fix GPU issues** | [GPU Troubleshooting](GPU_TROUBLESHOOTING.md) | 5 minutes |
+| **Fix any issues** | [Troubleshooting Guide](TROUBLESHOOTING.md) | 5 minutes |
 | **Publish a model** | [Hugging Face Publishing](HUGGINGFACE_PUBLISHING.md) | 10 minutes |
 
 ## 📖 **Getting Started**
@@ -46,7 +46,7 @@ Welcome to the **helloLondon** documentation! This folder contains comprehensive
 - **Data Volume**: 500M+ characters of authentic historical English
 - **Geographic Focus**: London and England
 - **Time Period**: Tudor, Stuart, Georgian, and Victorian eras
-- **Text Types**: Literature, legal, scientific, commercial, personal, and religious texts
+- **Text Types**: Literature, legal, scientific, personal, and religious texts
 
 ## 🏗️ **Model Architecture & Training**
 
@@ -87,12 +87,28 @@ Welcome to the **helloLondon** documentation! This folder contains comprehensive
 
 ### **Model Publishing**
 - **[Hugging Face Publishing](HUGGINGFACE_PUBLISHING.md)** - Publish models to Hugging Face
-- **[Deployment Guide](DEPLOYMENT_GUIDE.md)** - Production deployment options
+- **[Deployment Guide](DEPLOYMENT_GUIDE.md)** - Inference deployment options
 
 ### **Deployment Options**
 - **Hugging Face Hub**: Published models ready for download
 - **Local Inference**: Command-line and API deployment
 - **Docker Support**: Containerized deployment options
+
+## 🔧 **Troubleshooting & Support**
+
+### **Problem Solving**
+- **[Troubleshooting Guide](TROUBLESHOOTING.md)** - **Complete troubleshooting solutions** for all common issues
+- **[GPU Troubleshooting](GPU_TROUBLESHOOTING.md)** - GPU-specific issues and optimization
+- **[GPU Tuning](GPU_TUNING.md)** - Performance optimization and hardware tuning
+
+### **Common Issue Categories**
+- **Environment & Setup** - Virtual environment, path problems, activation failures
+- **Data Collection** - Failed downloads, data quality, cleaning issues
+- **Tokenizer Issues** - Vocabulary mismatches, WordPiece artifacts, consistency
+- **Model Training** - OOM errors, training interruptions, performance problems
+- **Model Loading** - Hugging Face errors, checkpoint loading, generation issues
+- **Evaluation** - Script problems, missing dependencies, performance issues
+- **Multi-Machine** - Git sync, environment differences, consistency issues
 
 ## 🔬 **Technical Deep Dives**
 
@@ -144,7 +160,7 @@ This documentation is organized by workflow:
 2. **📊 Data & Processing** → Data collection, cleaning, and preparation
 3. **🏗️ Model Architecture** → Training configuration and optimization
 4. **🧪 Evaluation** → Testing and validation
-5. **🚀 Deployment** → Publishing and production use
+5. **🚀 Deployment** → Publishing and educational use
 6. **🔬 Technical Deep Dives** → Advanced topics and implementation details
 
 ## 🤝 **Contributing to Documentation**

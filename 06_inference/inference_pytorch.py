@@ -60,9 +60,9 @@ class PyTorchCheckpointInference:
             "slm": {
                 "description": "Small Language Model (117M parameters)",
                 "max_length": 512,  # Will be updated from config
-                "temperature": 0.8,
+                "temperature": 0.7,
                 "top_p": 0.9,
-                "top_k": 50
+                "top_k": 40
             },
             "regular": {
                 "description": "Regular Language Model (354M parameters)", 
@@ -350,7 +350,7 @@ class PyTorchCheckpointInference:
                      temperature: float = None,
                      top_p: float = None,
                      top_k: int = None,
-                     repetition_penalty: float = 1.1,
+                     repetition_penalty: float = 1.2,
                      num_return_sequences: int = 1) -> List[str]:
         """
         Generate text from a prompt
@@ -390,10 +390,24 @@ class PyTorchCheckpointInference:
             # Use custom generation for both SimpleGPT and GPT
             generated = inputs.clone()
             
-            for _ in range(max_length - input_length):
+            # Track recent tokens to detect repetitive patterns
+            recent_tokens = []
+            repetition_threshold = 5  # Stop if we see the same token repeated 5 times in a row
+            
+            for step in range(max_length - input_length):
                 # Get logits for next token
                 logits, _ = self.model(generated)
                 next_token_logits = logits[:, -1, :] / temperature
+                
+                # Apply repetition penalty
+                if repetition_penalty != 1.0:
+                    # Get unique tokens in the generated sequence so far
+                    unique_tokens = torch.unique(generated[0])
+                    for token_id in unique_tokens:
+                        if next_token_logits[0, token_id] > 0:
+                            next_token_logits[0, token_id] /= repetition_penalty
+                        else:
+                            next_token_logits[0, token_id] *= repetition_penalty
                 
                 # Apply top-k filtering
                 if top_k > 0:
@@ -414,6 +428,16 @@ class PyTorchCheckpointInference:
                 # Sample next token
                 probs = torch.softmax(next_token_logits, dim=-1)
                 next_token = torch.multinomial(probs, num_samples=1)
+                
+                # Check for repetitive patterns
+                recent_tokens.append(next_token.item())
+                if len(recent_tokens) > repetition_threshold:
+                    recent_tokens.pop(0)
+                
+                # If we see the same token repeated too many times, break
+                if len(recent_tokens) == repetition_threshold and len(set(recent_tokens)) == 1:
+                    logger.warning(f"Detected repetitive pattern, stopping generation at step {step}")
+                    break
                 
                 # Append to sequence
                 generated = torch.cat([generated, next_token], dim=1)
