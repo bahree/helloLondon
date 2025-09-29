@@ -13,6 +13,20 @@ This guide shows you how to set up the London Historical SLM for inference on a 
 | **Hugging Face Models** | Working | SLM published, Regular ready to publish |
 | **Local Testing** | Complete | Tested on remote Ubuntu machine |
 | **Warning Suppression** | Fixed | Clean output without verbose warnings |
+| **Default Parameters** | Optimized | Conservative settings for better quality |
+
+## **Improved Default Generation Parameters**
+
+The inference system now uses optimized default parameters for better text quality:
+
+| **Parameter** | **Old Default** | **New Default** | **Benefit** |
+|---------------|-----------------|-----------------|-------------|
+| **Temperature** | 0.7 | 0.3 | More focused, less random generation |
+| **Top-k** | 40 | 20 | More focused token selection |
+| **Top-p** | 0.95 | 0.9 | Slightly more focused nucleus sampling |
+| **Max Length** | 512 | 100 (SLM) / 200 (Regular) | Prevents repetitive patterns |
+
+These conservative settings produce much better quality text with less repetition and more coherent historical narratives.
 
 ## Prerequisites
 
@@ -210,9 +224,9 @@ def generate_historical_text(prompt, max_length=50):
             inputs['input_ids'],
             max_new_tokens=max_length,
             do_sample=True,
-            temperature=0.8,
-            top_p=0.95,
-            top_k=40,
+            temperature=0.3,
+            top_p=0.9,
+            top_k=20,
             repetition_penalty=1.2,
             no_repeat_ngram_size=3,
             pad_token_id=tokenizer.pad_token_id,

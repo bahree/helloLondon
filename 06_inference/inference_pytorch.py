@@ -59,17 +59,17 @@ class PyTorchCheckpointInference:
         self.model_configs = {
             "slm": {
                 "description": "Small Language Model (117M parameters)",
-                "max_length": 512,  # Will be updated from config
-                "temperature": 0.7,
-                "top_p": 0.9,
-                "top_k": 40
+                "max_length": 100,  # Conservative default for better quality
+                "temperature": 0.3,  # Lower temperature for more focused generation
+                "top_p": 0.9,       # Keep nucleus sampling
+                "top_k": 20         # Lower top-k for more focused generation
             },
             "regular": {
                 "description": "Regular Language Model (354M parameters)", 
-                "max_length": 1024,  # Will be updated from config
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "top_k": 40
+                "max_length": 200,  # Slightly longer for regular model
+                "temperature": 0.3,  # Lower temperature for more focused generation
+                "top_p": 0.9,       # Keep nucleus sampling
+                "top_k": 20         # Lower top-k for more focused generation
             }
         }
         
