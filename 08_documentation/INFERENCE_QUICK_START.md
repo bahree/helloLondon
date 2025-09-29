@@ -80,8 +80,9 @@ outputs = model.generate(
     inputs['input_ids'], 
     max_new_tokens=50, 
     do_sample=True,
-    temperature=0.8,
-    top_p=0.95,
+    temperature=0.3,
+    top_p=0.9,
+    top_k=20,
     repetition_penalty=1.2
 )
 result = tokenizer.decode(outputs[0], skip_special_tokens=True)

@@ -464,11 +464,14 @@ outputs = model.generate(
     inputs["input_ids"],
     max_new_tokens=50,
     do_sample=True,
-    temperature=0.8,
-    top_p=0.95
+    temperature=0.3,
+    top_p=0.9,
+    top_k=20
 )
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
+
+> **💡 Generation Parameters Note**: The example above uses conservative parameters (`temperature=0.3`, `top_k=20`, `top_p=0.9`) that produce high-quality, coherent historical text. These are the recommended settings for best results.
 
 ### **Expected Output Quality**
 Your model generates text like:
