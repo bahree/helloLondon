@@ -53,18 +53,18 @@ class PublishedModelTester:
             "slm": {
                 "name": "bahree/london-historical-slm",
                 "description": "Small Language Model (117M parameters)",
-                "max_length": 512,
-                "temperature": 0.8,
+                "max_length": 100,
+                "temperature": 0.3,
                 "top_p": 0.9,
-                "top_k": 50
+                "top_k": 20
             },
             "regular": {
                 "name": "bahree/london-historical-llm",  # Placeholder - update when available
                 "description": "Regular Language Model (354M parameters)",
-                "max_length": 1024,
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "top_k": 40
+                "max_length": 150,
+                "temperature": 0.3,
+                "top_p": 0.9,
+                "top_k": 20
             }
         }
         
