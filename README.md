@@ -9,7 +9,11 @@
 
 > **🚀 Ready to Use**: The [London Historical SLM](https://huggingface.co/bahree/london-historical-slm) is already published and available on Hugging Face!
 
-> **📝 Blog Series**: [Building LLMs from Scratch - Part 1](https://blog.desigeek.com/post/2025/09/building-llm-from-scratch-part1/) - Complete 4-part series covering the end-to-end process of building historical language models from scratch.
+> **📝 Blog Series**: 
+> - [Building LLMs from Scratch - Part 1](https://blog.desigeek.com/post/2025/09/building-llm-from-scratch-part1/) - Quick start and overview
+> - [Building LLMs from Scratch - Part 2](https://blog.desigeek.com/post/2025/10/building-llm-from-scratch-part2-data-tokenizers/) - Data Collection & Custom Tokenizers
+> 
+> Complete 4-part series covering the end-to-end process of building historical language models from scratch.
 
 ```mermaid
 graph LR

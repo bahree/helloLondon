@@ -156,7 +156,7 @@ else:
 python run_evaluation.py --mode quick --device cpu
 
 # Check specific checkpoint
-python run_evaluation.py --mode quick --device cpu --model_dir 09_models/checkpoints/checkpoint-5000
+python run_evaluation.py --mode quick --device cpu --model_dir 09_models/checkpoints/checkpoint-51000
 ```
 
 #### **Between Training Sessions**
@@ -281,7 +281,7 @@ cd ~/src/helloLondon
 python 05_evaluation/run_evaluation.py --mode quick --device cpu
 
 # Monitor training progress with periodic evaluation
-python 05_evaluation/run_evaluation.py --mode quick --device cpu --model_dir 09_models/checkpoints/checkpoint-5000
+python 05_evaluation/run_evaluation.py --mode quick --device cpu --model_dir 09_models/checkpoints/checkpoint-51000
 ```
 
 ### **Comprehensive Evaluation**

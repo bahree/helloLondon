@@ -102,10 +102,16 @@ helloLondon/
 │   ├── 📁 processed/                   # Cleaned and processed text
 │   └── 📁 metadata/                    # Data collection metadata
 ├── 📁 09_models/
-│   ├── 📁 checkpoints/slm/             # Model checkpoints during training
-│   │   ├── 📁 checkpoint-500/          # Checkpoint every 500 steps
-│   │   ├── 📁 checkpoint-1000/
-│   │   └── 📁 pretokenized_data/       # Pre-tokenized data (performance boost)
+│   ├── 📁 checkpoints/                 # Regular model checkpoints (354M)
+│   │   ├── 📄 checkpoint-44000.pt
+│   │   ├── 📄 checkpoint-47000.pt
+│   │   ├── 📄 checkpoint-51000.pt
+│   │   ├── 📄 checkpoint-59000.pt
+│   │   └── 📄 checkpoint-60001.pt
+│   ├── 📁 checkpoints/slm/             # SLM model checkpoints (117M)
+│   │   ├── 📄 checkpoint-52000.pt
+│   │   ├── 📄 checkpoint-60000.pt
+│   │   └── 📄 checkpoint-60001.pt
 │   └── 📁 tokenizers/london_historical_tokenizer/  # Custom tokenizer
 │       ├── 📄 tokenizer.json           # Tokenizer configuration
 │       ├── 📄 vocab.json               # Vocabulary mapping
@@ -405,9 +411,9 @@ torchrun --nproc_per_node=2 train_model.py
 ```bash
 # Resume from specific checkpoint
 cd 04_training
-torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_models/checkpoints/slm/checkpoint-500.pt
+torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_models/checkpoints/slm/checkpoint-52000.pt
 # or for regular model:
-torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-1500.pt
+torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-51000.pt
 ```
 
 ### **Slow Training**

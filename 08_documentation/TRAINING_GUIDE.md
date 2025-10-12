@@ -26,14 +26,16 @@ helloLondon/
 │   ├── 📁 processed/                   # Cleaned and processed text
 │   └── 📁 metadata/                    # Data collection metadata and statistics
 ├── 📁 09_models/
-│   ├── 📁 checkpoints/slm/             # SLM model checkpoints during training
-│   │   ├── 📁 checkpoint-500/          # Checkpoint every 500 steps
-│   │   ├── 📁 checkpoint-1000/
-│   │   ├── 📁 checkpoint-60000/        # Final checkpoint
-│   │   └── 📁 pretokenized_data/       # Pre-tokenized data (performance boost)
-│   ├── 📁 checkpoints/                 # Regular model checkpoints
-│   │   ├── 📁 checkpoint-250/          # Checkpoint every 250 steps
-│   │   └── 📁 checkpoint-500/
+│   ├── 📁 checkpoints/                 # Regular model checkpoints (354M)
+│   │   ├── 📄 checkpoint-44000.pt
+│   │   ├── 📄 checkpoint-47000.pt
+│   │   ├── 📄 checkpoint-51000.pt
+│   │   ├── 📄 checkpoint-59000.pt
+│   │   └── 📄 checkpoint-60001.pt
+│   ├── 📁 checkpoints/slm/             # SLM model checkpoints (117M)
+│   │   ├── 📄 checkpoint-52000.pt
+│   │   ├── 📄 checkpoint-60000.pt
+│   │   └── 📄 checkpoint-60001.pt
 │   └── 📁 tokenizers/london_historical_tokenizer/  # Custom tokenizer
 │       ├── 📄 tokenizer.json           # Tokenizer configuration
 │       ├── 📄 vocab.json               # Vocabulary mapping
@@ -419,7 +421,7 @@ cd 04_training
 python test_checkpoint.py --checkpoint_path 09_models/checkpoints/checkpoint-XXXX.pt
 
 # Example: Test checkpoint at step 1500
-python test_checkpoint.py --checkpoint_path 09_models/checkpoints/checkpoint-1500.pt
+python test_checkpoint.py --checkpoint_path 09_models/checkpoints/checkpoint-51000.pt
 
 # Quick test - automatically finds latest checkpoint
 python test_checkpoint.py
@@ -550,9 +552,9 @@ torchrun --nproc_per_node=2 train_model_slm.py
 ```bash
 # Resume from a specific checkpoint (more control)
 cd 04_training
-torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-1500.pt
+torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-51000.pt
 # or for SLM:
-torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_models/checkpoints/slm/checkpoint-3000.pt
+torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_models/checkpoints/slm/checkpoint-60000.pt
 ```
 
 #### **When to Use Each Option:**
@@ -560,8 +562,8 @@ torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_model
 | Scenario | Command | Reason |
 |----------|---------|---------|
 | **Quick restart** | `torchrun --nproc_per_node=2 train_model.py` | Auto-detects latest checkpoint |
-| **Production training** | `torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-1500.pt` | Full control over which checkpoint |
-| **Debugging** | `torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-1000.pt` | Test specific checkpoint |
+| **Production training** | `torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-51000.pt` | Full control over which checkpoint |
+| **Debugging** | `torchrun --nproc_per_node=2 train_model.py --resume_from_checkpoint 09_models/checkpoints/checkpoint-47000.pt` | Test specific checkpoint |
 | **Multiple experiments** | Use explicit path | Avoid confusion between different runs |
 
 #### **Using Resume Script (Easiest):**
@@ -570,7 +572,7 @@ torchrun --nproc_per_node=2 train_model_slm.py --resume_from_checkpoint 09_model
 chmod +x resume_training.sh
 
 # Resume from specific checkpoint
-./resume_training.sh checkpoint-500
+./resume_training.sh checkpoint-52000
 
 # List available checkpoints
 ./resume_training.sh
@@ -611,7 +613,7 @@ chmod +x resume_training.sh
 
 ### **Checkpoint Saving:**
 ```
-Saving model checkpoint to 09_models/checkpoints/slm/checkpoint-500
+Saving model checkpoint to 09_models/checkpoints/slm/checkpoint-52000.pt
 ```
 - **Frequency**: Every 500 steps (SLM) / Every 250 steps (Regular)
 - **Files saved**: Model weights, config, tokenizer, optimizer state
@@ -621,7 +623,7 @@ Saving model checkpoint to 09_models/checkpoints/slm/checkpoint-500
 ### **Early Training (Steps 0-2000):**
 - **Loss**: High initially (8-14), decreasing rapidly
 - **Text Quality**: Gibberish, repetitive patterns
-- **Checkpoints**: checkpoint-500, checkpoint-1000, checkpoint-1500, checkpoint-2000
+- **Checkpoints**: checkpoint-52000, checkpoint-60000, checkpoint-60001
 
 ### **Mid Training (Steps 2000-20000):**
 - **Loss**: Moderate (4-8), steady decrease
@@ -737,8 +739,8 @@ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
 │   ├── scheduler.pt
 │   ├── training_args.bin
 │   └── tokenizer files
-├── checkpoint-500/
-└── checkpoint-750/
+├── checkpoint-52000.pt
+└── checkpoint-60000.pt
 ```
 
 ### **Checkpoint Cleanup:**

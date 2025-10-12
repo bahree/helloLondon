@@ -176,6 +176,3 @@ pip install transformers torch accelerate
 - **Want to understand the project?** → [London Historical LLM README](README.md)
 - **Need help with evaluation?** → [Evaluation Quick Reference](EVALUATION_QUICK_REFERENCE.md)
 
----
-
-**Ready to generate historical London text!**
