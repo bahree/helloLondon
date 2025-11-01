@@ -12,6 +12,7 @@
 > **📝 Blog Series**: 
 > - [Building LLMs from Scratch - Part 1](https://blog.desigeek.com/post/2025/09/building-llm-from-scratch-part1/) - Quick start and overview
 > - [Building LLMs from Scratch - Part 2](https://blog.desigeek.com/post/2025/10/building-llm-from-scratch-part2-data-tokenizers/) - Data Collection & Custom Tokenizers
+> - [Building LLMs from Scratch - Part 3](https://blog.desigeek.com/post/2025/11/building-llm-from-scratch-part3-model-architecture-gpu-training/) - Training Architecture & GPU Optimization
 > 
 > Complete 4-part series covering the end-to-end process of building historical language models from scratch.
 
@@ -29,6 +30,7 @@ graph LR
     style F fill:#e8f5e8
     style G fill:#fff3e0
 ```
+[![ko-fi](https://img.shields.io/badge/ko--fi-Fuel%20my%20AI-29abe0?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/bahree)
 
 ## **🎓 What You'll Learn**
 
@@ -424,7 +426,7 @@ The project includes advanced data filtering and quality control systems that en
 
 ## **🤝 Support**
 
-You are kidding right? 🤣
+[![ko-fi](https://img.shields.io/badge/ko--fi-Fuel%20my%20AI-29abe0?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/bahree)
 
 For issues and questions:
 1. Check the troubleshooting guide above

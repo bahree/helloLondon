@@ -4,6 +4,11 @@ Welcome to the **helloLondon** documentation! This folder contains comprehensive
 
 > **🏠 Main Project**: For the complete project overview and quick start, see the [London Historical LLM README](README.md)
 
+## 📝 **Blog Series**
+- [Building LLMs from Scratch - Part 1](https://blog.desigeek.com/post/2025/09/building-llm-from-scratch-part1/) - Quick start and overview
+- [Building LLMs from Scratch - Part 2](https://blog.desigeek.com/post/2025/10/building-llm-from-scratch-part2-data-tokenizers/) - Data Collection & Custom Tokenizers
+- [Building LLMs from Scratch - Part 3](https://blog.desigeek.com/post/2025/11/building-llm-from-scratch-part3-model-architecture-gpu-training/) - Training Architecture & GPU Optimization
+
 ## 🚀 **Quick Navigation**
 
 | **I Want To...** | **Start Here** | **Time** |
